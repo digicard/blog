@@ -1,0 +1,14 @@
+h1	Nuevo Articulo
+small Ruby on rails en DIGICARD
+
+= form_for :articulo, url: articulos_path do |f|
+  p
+    = f.label :titulo
+    = f.text_field :titulo
+ 
+  p
+    = f.label :texto
+    = f.text_area :texto
+ 
+  p
+    = f.submit
