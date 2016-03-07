@@ -1,0 +1,11 @@
+Style/Encoding:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 99
+
+Rails:
+  Enabled: true
+
+Documentation:
+ Enabled: false
