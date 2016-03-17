@@ -1,17 +1,24 @@
+div	class="container"
+	div	class="row"
+		div	class="col-md-12"
+			h1 class="page-header"	Listado de Articulos
 
-h1 class="page-header"	Listado de Articulos
+			a href="/articulos/new"
+				button class="btn btn-default" Nuevo
 
-table cellspacing=5 cellpadding=5
-	thead
-		tr
-			th Titulo
-			th Texto
-	tbody
+			BR
 
-		= @articulos.each do |articulo|
+			table cellspacing=15 cellpadding=15
+				thead
+					tr
+						th Titulo
+						th Texto
+				tbody
 
-			tr
-				td
-					= articulo.titulo
-				td
-					= articulo.texto
+					- @articulos.each do |articulo|
+
+						tr
+							td
+								= articulo.titulo
+							td
+								= articulo.texto

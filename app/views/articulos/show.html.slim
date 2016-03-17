@@ -1,7 +1,19 @@
-p
-  strong Titulo
-  = @articulo.titulo
- 
-p
-  strong Texto
-  = @articulo.texto
+div	class="container"
+	div	class="row"
+		div	class="col-md-12"
+			h1 class="page-header" Correcto
+
+			a href="/articulos"
+				button class="btn btn-default" Articulos
+			
+			BR
+			
+			p
+			  strong Titulo
+			p
+			  = @articulo.titulo
+			 
+			p
+			  strong Texto
+			p
+			  = @articulo.texto
