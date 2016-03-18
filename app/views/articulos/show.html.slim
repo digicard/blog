@@ -1,19 +1,23 @@
-div	class="container"
-	div	class="row"
-		div	class="col-md-12"
-			h1 class="page-header" Correcto
+.container
+	.row
+		.col-md-12
+			h1.page-header	Se genero correctamente
 
-			a href="/articulos"
-				button class="btn btn-default" Articulos
+			a href=articulos_path
+				button.btn.btn-default Articulos
 			
 			BR
 			
 			p
 			  strong Titulo
-			p
-			  = @articulo.titulo
+			
+			blockquote
+				p
+			  		= @articulo.titulo
 			 
 			p
 			  strong Texto
-			p
-			  = @articulo.texto
+			
+			blockquote
+				p
+			  		= @articulo.texto
