@@ -1,17 +1,30 @@
+.container
+	.row
+		.col-md-8
+			h1.page-header	Listado de Articulos
 
-h1 class="page-header"	Listado de Articulos
+		.col-md-4
+			a href=destroy_usuario_session_path data-method="delete"
+				button.btn.btn-default Cerrar sesion
 
-table cellspacing=5 cellpadding=5
-	thead
-		tr
-			th Titulo
-			th Texto
-	tbody
+	.row
+		.col-md-12
+			a href= new_articulo_path 
+				button.btn.btn-default Nuevo
 
-		= @articulos.each do |articulo|
+			BR
 
-			tr
-				td
-					= articulo.titulo
-				td
-					= articulo.texto
+			table.table cellspacing=15 cellpadding=15
+				thead
+					tr
+						th Titulo
+						th Texto
+				tbody
+
+					- @articulos.each do |articulo|
+
+						tr
+							td
+								= articulo.titulo
+							td
+								= articulo.texto

@@ -27,6 +27,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Devise: para el modulo de autenticacion de usuarios
+gem 'devise'
+
+# Convertidor de plantilla ERB a SLIM
+gem 'html2slim'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
+  devise_for :usuarios , controllers: { passwords: "usuarios/passwords", sessions: "usuarios/sessions", registrations: "usuarios/registrations" }
+  
+  devise_scope :usuario do
+    delete "usuarios/sign_out" => "usuarios/sessions#destroy"
+  end
+
   resources :articulos
+
   # get 'welcome/index'
   root 'welcome#index'
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
