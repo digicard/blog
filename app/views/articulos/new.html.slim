@@ -1,22 +1,25 @@
 .container
 	.row
-		.col-md-12
+		.col-md-8
 			h1.page-header	Nuevo articulo
+
+		.col-md-4
+			a href=destroy_usuario_session_path data-method="delete"
+				button.btn.btn-default Cerrar sesion
+
+	.row
+		.col-md-6
 
 			a href=articulos_path
 				button.btn.btn-default Articulos
 
-			BR
-
-	.row
-		.col-md-6
 
 			= form_for :articulo, url: articulos_path do |f|
 
 			  .form-group
 			  
 			    p
-			      = f.label :titulo
+				  = f.label :titulo
 			      = f.text_field :titulo, class: "form-control"
 			
 			  .form-group 
