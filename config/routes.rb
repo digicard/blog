@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  devise_for :usuarios , controllers: { passwords: "usuarios/passwords", sessions: "usuarios/sessions", registrations: "usuarios/registrations" }
+  devise_for :usuarios , controllers: { passwords: "usuarios/passwords",
+                                        sessions: "usuarios/sessions", 
+                                        registrations: "usuarios/registrations", 
+                                        omniauth_callbacks: "usuarios/omniauth_callbacks"}
   
   devise_scope :usuario do
     delete "usuarios/sign_out" => "usuarios/sessions#destroy"
+    # get '/auth/google_oauth2/callback' => 'usuarios/sessions#create'
   end
 
   resources :articulos
