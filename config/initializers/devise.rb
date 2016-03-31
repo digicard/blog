@@ -10,6 +10,7 @@ Devise.setup do |config|
 
   # ==> OMNIAUTH parametros
   config.omniauth :google_oauth2, Rails.application.secrets.google_client_id, Rails.application.secrets.google_client_secret, { }
+  config.omniauth :facebook, Rails.application.secrets.facebook_client_id, Rails.application.secrets.facebook_client_secret, { }
 
 
   # ==> Mailer Configuration

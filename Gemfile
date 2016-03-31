@@ -37,6 +37,8 @@ gem 'html2slim'
 # gem 'omniauth-google-oauth2'
 # gem "omniauth-google-oauth2", :git => 'https://github.com/zquestz/omniauth-google-oauth2', :branch => 'master'
 gem "omniauth-google-oauth2"
+# Autenticacion con FACEBOOK
+gem 'omniauth-facebook'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

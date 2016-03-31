@@ -1,9 +1,9 @@
 class Usuarios::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
-  def google_oauth2
+  def all
       # You need to implement the method below in your model (e.g. app/models/user.rb)
       @usuario = Usuario.from_omniauth(request.env["omniauth.auth"])
-      
+
       if @usuario.persisted?
         flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Google"
         sign_in_and_redirect @usuario, :event => :authentication
@@ -12,6 +12,10 @@ class Usuarios::OmniauthCallbacksController < Devise::OmniauthCallbacksControlle
         redirect_to new_usuario_registration_path
       end
   end
+
+  alias_method :google_oauth2, :all
+  alias_method :facebook, :all
+
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
 
