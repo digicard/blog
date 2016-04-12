@@ -35,8 +35,6 @@ gem 'devise-i18n'
 gem 'html2slim'
 
 # Autenticacion con GOOGLE
-# gem 'omniauth-google-oauth2'
-# gem "omniauth-google-oauth2", :git => 'https://github.com/zquestz/omniauth-google-oauth2', :branch => 'master'
 gem "omniauth-google-oauth2"
 # Autenticacion con FACEBOOK
 gem 'omniauth-facebook'
