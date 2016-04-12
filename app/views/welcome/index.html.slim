@@ -1,18 +1,24 @@
 
 .container
 	.row
-		.col-md-8
-			h1.page-header Blog
+		.col-md-2.col-md-offset-8
+			a href=destroy_usuario_session_path
+				button.btn.btn-default =t :cerrar_sesion
+		.col-md-2
+			a href=root_path+"?locale_new=es"
+				button.btn.btn-default.btn-xs Español
+			a href=root_path+"?locale_new=en"
+				button.btn.btn-default.btn-xs Ingles
 
-		.col-md-4
-			a href=destroy_usuario_session_path data-method="delete"
-				button.btn.btn-default Cerrar sesion
+	.row
+		.col-md-12
+			h1.page-header Blog
 
 		.col-md-12
 			a href=articulos_path
-				button.btn.btn-default Articulos
+				button.btn.btn-default =t :articulos
 
 			a href=new_articulo_path
-				button.btn.btn-default Nuevo
+				button.btn.btn-default =t :nuevo
 
 

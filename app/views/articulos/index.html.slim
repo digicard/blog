@@ -1,24 +1,30 @@
 .container
 	.row
-		.col-md-8
-			h1.page-header	Listado de Articulos
-
-		.col-md-4
-			a href=destroy_usuario_session_path data-method="delete"
-				button.btn.btn-default Cerrar sesion
+		.col-md-2.col-md-offset-8
+			a href=destroy_usuario_session_path
+				button.btn.btn-default =t :cerrar_sesion
+		.col-md-2
+			a href=articulos_path+"?locale_new=es"
+				button.btn.btn-default.btn-xs Español
+			a href=articulos_path+"?locale_new=en"
+				button.btn.btn-default.btn-xs Ingles
 
 	.row
 		.col-md-12
-			a href= new_articulo_path 
-				button.btn.btn-default Nuevo
+			h1.page-header =t :lista_articulo_titulo
+
+	.row
+		.col-md-12
+			a href= new_articulo_path(locale: I18n.locale)
+				button.btn.btn-default =t :nuevo
 
 			BR
 
 			table.table cellspacing=15 cellpadding=15
 				thead
 					tr
-						th Titulo
-						th Texto
+						th =t :articulo_field_titulo
+						th =t :articulo_field_texto
 				tbody
 
 					- @articulos.each do |articulo|

@@ -1,8 +1,14 @@
+
 .container
 	.row
+		.col-md-2.col-md-offset-10
+			a href=root_path
+				button.btn.btn-default.btn-xs Español
+			a href=root_path
+				button.btn.btn-default.btn-xs Ingles
+	.row
 		.col-md-3
-
-			h1.page-header Log in
+			h1.page-header =t :login_titulo
 
 			= form_for :usuario, url: usuario_session_path do |f|
 
@@ -16,9 +22,9 @@
 
 				-   if devise_mapping.rememberable?
 				.form-group
-			      = f.check_box :remember_me  
-			      = f.label :remember_me  
+			      = f.check_box :remember_me
+			      = f.label t(:login_recordar)
 
 				.actions
-			      = f.submit "Log in"  , class: "btn-default btn"
+			      = f.submit t(:login_boton)  , class: "btn-default btn"
 				  = render "usuarios/shared/links"  

@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Devise: para el modulo de autenticacion de usuarios
 gem 'devise'
+gem 'devise-i18n'
 
 # Convertidor de plantilla ERB a SLIM
 gem 'html2slim'

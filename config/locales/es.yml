@@ -1,0 +1,33 @@
+es:
+  hola: "Hola mundo"
+
+  # Butones
+  cerrar_sesion: "Cerrar sesion"
+  articulos: "Articulos"
+  nuevo: "Nuevo"
+  grabar: "Grabar
+  "
+  # Login
+  login_boton: "Entrar"
+  login_titulo: "Ingresar"
+  login_recordar: "recordarme"
+  login_pass_perdida: "Olvido su contraseña?"
+  login_con: "Conectarse con %{omniauth}"
+
+  # Registro
+  registro_titulo: "Registrarse"
+  registro_boton: "Enviar"
+  caracteres_minimos: " %{minimos} caracteres minimos"
+  confirmacion_password: "Password confirmacion"
+
+  articulo_field_titulo: "Titulo"
+  articulo_field_texto: "Texto"
+
+  # Listado Articulos
+  lista_articulo_titulo: "Listado de articulos"
+  
+  # Nuevo Articulo
+  nuevo_articulo_titulo: "Nuevo articulo"
+
+  # Show Articulo
+  show_articulo_titulo: "Generado correctamente!"

@@ -1,14 +1,14 @@
 - if controller_name != 'sessions'
-  = link_to "Log in", new_session_path(resource_name)
+  = link_to t(:login_titulo), new_session_path(resource_name)
 br
 
 - if devise_mapping.registerable? && controller_name != 'registrations' 
-  = link_to "Sign up", new_usuario_registration_path
+  = link_to t(:registro_titulo), new_usuario_registration_path
 
 br
 
 - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' 
-  = link_to "Forgot your password?", new_usuario_password_path
+  = link_to t(:login_pass_perdida), new_usuario_password_path
 
 br
 
@@ -26,7 +26,7 @@ br
   - resource_class.omniauth_providers.each do |provider| 
   	a href=omniauth_authorize_path(resource_name, provider) 
 	  button.btn.btn-primary
-	    span Conectar con #{OmniAuth::Utils.camelize(provider)}
+	    span =t "login_con" , omniauth: "#{OmniAuth::Utils.camelize(provider)}"
     / = link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) 
 
 br

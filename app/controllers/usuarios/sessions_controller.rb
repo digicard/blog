@@ -1,5 +1,10 @@
 class Usuarios::SessionsController < Devise::SessionsController
 # before_filter :configure_sign_in_params, only: [:create]
+  
+  before_action :set_locale
+
+  def set_locale
+  end
 
   # GET /resource/sign_in
   def new
