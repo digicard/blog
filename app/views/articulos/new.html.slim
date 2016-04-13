@@ -1,14 +1,3 @@
-.container
-	.row
-		.col-md-2.col-md-offset-8
-			a href=destroy_usuario_session_path
-				button.btn.btn-default =t :cerrar_sesion
-		.col-md-2
-			a href=new_articulo_path+"?locale_new=es"
-				button.btn.btn-default.btn-xs Español
-			a href=new_articulo_path+"?locale_new=en"
-				button.btn.btn-default.btn-xs Ingles
-
 	.row
 		.col-md-12
 			h1.page-header =t :nuevo_articulo_titulo
@@ -23,18 +12,18 @@
 			= form_for :articulo, url: articulos_path do |f|
 
 			  .form-group
-			  
+
 			    p
 				  = f.label t(:articulo_field_titulo)
 			      = f.text_field :titulo, class: "form-control"
-			
-			  .form-group 
-			  
+
+			  .form-group
+
 			    p
 			      = f.label t(:articulo_field_texto)
 			      = f.text_area :texto, class: "form-control"
-			  
-			  .form-group 
+
+			  .form-group
 
 			    p
 			      = f.submit t(:grabar), class: "btn-default btn"

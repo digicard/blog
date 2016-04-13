@@ -5,16 +5,12 @@ class ApplicationController < ActionController::Base
   before_action :set_locale, :authenticate_usuario!
 
   def set_locale
-    puts params.inspect
-    set_new_locale(params[:locale_new]) if params.has_key?(:locale_new)
-    puts current_usuario.inspect
-  	# I18n.locale = params[:locale] || I18n.default_locale
     I18n.locale = current_usuario.present? ? current_usuario.preferred_language : I18n.default_locale
   end
 
-  def set_new_locale(langague)
-    current_usuario.preferred_language = langague
+  def set_new_locale
+    current_usuario.preferred_language = params[:format]
     current_usuario.save(validate: false)
+    redirect_to :back
   end
-  
 end

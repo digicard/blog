@@ -1,0 +1,12 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .col-md-6
+      button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"]
+      a.navbar-brand
+        = link_to 'Blog', root_path, class: 'a navbar-brand'
+    .col-md-2
+      a href=destroy_usuario_session_path
+        button.btn.btn-default =t :cerrar_sesion
+    .col-md-2
+      = button_to 'Español',set_new_locale_path('es'), class: 'btn button btn-default btn-xs', method: :get
+      = button_to 'English',set_new_locale_path('en'), class: 'btn button btn-default btn-xs', method: :get
