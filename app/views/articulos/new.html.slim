@@ -1,34 +1,29 @@
-.container
 	.row
-		.col-md-8
-			h1.page-header	Nuevo articulo
-
-		.col-md-4
-			a href=destroy_usuario_session_path data-method="delete"
-				button.btn.btn-default Cerrar sesion
+		.col-md-12
+			h1.page-header =t :nuevo_articulo_titulo
 
 	.row
 		.col-md-6
 
 			a href=articulos_path
-				button.btn.btn-default Articulos
+				button.btn.btn-default =t :articulos
 
 
 			= form_for :articulo, url: articulos_path do |f|
 
 			  .form-group
-			  
-			    p
-				  = f.label :titulo
-			      = f.text_field :titulo, class: "form-control"
-			
-			  .form-group 
-			  
-			    p
-			      = f.label :texto
-			      = f.text_area :texto, class: "form-control"
-			  
-			  .form-group 
 
 			    p
-			      = f.submit "Grabar", class: "btn-default btn"
+				  = f.label t(:articulo_field_titulo)
+			      = f.text_field :titulo, class: "form-control"
+
+			  .form-group
+
+			    p
+			      = f.label t(:articulo_field_texto)
+			      = f.text_area :texto, class: "form-control"
+
+			  .form-group
+
+			    p
+			      = f.submit t(:grabar), class: "btn-default btn"

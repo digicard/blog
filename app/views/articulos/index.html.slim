@@ -1,30 +1,21 @@
-.container
-	.row
-		.col-md-8
-			h1.page-header	Listado de Articulos
+.row
+	.col-md-12
+		h1.page-header =t :lista_articulo_titulo
 
-		.col-md-4
-			a href=destroy_usuario_session_path data-method="delete"
-				button.btn.btn-default Cerrar sesion
-
-	.row
-		.col-md-12
-			a href= new_articulo_path 
-				button.btn.btn-default Nuevo
-
-			BR
-
-			table.table cellspacing=15 cellpadding=15
-				thead
+.row
+	.col-md-12
+		a href= new_articulo_path
+			button.btn.btn-default =t :nuevo
+		br
+		table.table cellspacing=15 cellpadding=15
+			thead
+				tr
+					th =t :articulo_field_titulo
+					th =t :articulo_field_texto
+			tbody
+				- @articulos.each do |articulo|
 					tr
-						th Titulo
-						th Texto
-				tbody
-
-					- @articulos.each do |articulo|
-
-						tr
-							td
-								= articulo.titulo
-							td
-								= articulo.texto
+						td
+							= articulo.titulo
+						td
+							= articulo.texto

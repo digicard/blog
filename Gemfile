@@ -29,9 +29,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Devise: para el modulo de autenticacion de usuarios
 gem 'devise'
+gem 'devise-i18n'
 
 # Convertidor de plantilla ERB a SLIM
 gem 'html2slim'
+
+# Autenticacion con GOOGLE
+gem "omniauth-google-oauth2"
+# Autenticacion con FACEBOOK
+gem 'omniauth-facebook'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -43,8 +49,8 @@ gem 'html2slim'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'debugger' anywhere in the code to stop execution and get a debugger console
-  gem 'debugger'
+  # Call 'pry-byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry-byebug'
 end
 
 group :development do

@@ -1,8 +1,7 @@
-.container
   .row
     .col-md-3
 
-      h1.page-header Sign up
+      h1.page-header =t :registro_titulo
       = form_for(resource, url: registration_path(resource_name)) do |f|
         = devise_error_messages!
         .form-group
@@ -13,16 +12,14 @@
           = f.label :password
           - if @minimum_password_length
             em
-              | (
-              = @minimum_password_length
-              |  characters minimum)
+              =t "caracteres_minimos", minimos: @minimum_password_length
           
           = f.password_field :password, autocomplete: "off", class: "form-control"
         
         .form-group
-          = f.label :password_confirmation
+          = f.label t(:confirmacion_password)
           = f.password_field :password_confirmation, autocomplete: "off", class: "form-control"
 
         .actions
-          = f.submit "Sign up" , class: "btn-default btn"
+          = f.submit t(:registro_boton) , class: "btn-default btn"
       = render "usuarios/shared/links"
