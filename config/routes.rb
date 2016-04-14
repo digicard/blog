@@ -1,10 +1,10 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
 
   devise_scope :usuario do
     delete "usuarios/sign_out" => "usuarios/sessions#destroy"
   end
 
-  devise_for :usuarios, skip: :omniauth_callbacks, controllers: { passwords: "usuarios/passwords",
+  devise_for :usuarios, controllers: { passwords: "usuarios/passwords",
                                         sessions: "usuarios/sessions",
                                         registrations: "usuarios/registrations",
                                         omniauth_callbacks: "usuarios/omniauth_callbacks"}
