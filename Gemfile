@@ -39,6 +39,9 @@ gem "omniauth-google-oauth2"
 # Autenticacion con FACEBOOK
 gem 'omniauth-facebook'
 
+# Admin
+gem 'rails_admin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

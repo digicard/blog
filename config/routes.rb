@@ -1,5 +1,7 @@
- Rails.application.routes.draw do
+Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
   devise_scope :usuario do
     delete "usuarios/sign_out" => "usuarios/sessions#destroy"
   end
