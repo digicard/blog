@@ -16,6 +16,23 @@ class ArticulosController < ApplicationController
     redirect_to @articulo
   end
 
+  def edit
+    @articulo = Articulo.find(params[:id])
+    authorize @articulo
+  end
+
+  def update
+    @articulo = Articulo.find(params[:id])
+    if @articulo.update_attributes(articulo_params)
+      redirect_to :action => 'show' , :id => @articulo.id
+    end
+  end
+
+  def destroy
+    Articulo.find(params[:id]).destroy
+    redirect_to :action => 'index'
+  end
+
   private
 
   def articulo_params

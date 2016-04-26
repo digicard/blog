@@ -1,0 +1,29 @@
+	.row
+		.col-md-12
+			h1.page-header =t :nuevo_articulo_titulo
+
+	.row
+		.col-md-6
+
+			a href=articulos_path
+				button.btn.btn-default =t :articulos
+
+
+			= form_for :articulo, url: articulo_path(@articulo.id), method: :put do |f|
+
+			  .form-group
+
+			    p
+				  = f.label t(:articulo_field_titulo)
+			      = f.text_field :titulo, class: "form-control", value: @articulo.titulo
+
+			  .form-group
+
+			    p
+			      = f.label t(:articulo_field_texto)
+			      = f.text_area :texto, class: "form-control", value: @articulo.texto
+
+			  .form-group
+
+			    p
+			      = f.submit t(:grabar), class: "btn-default btn"

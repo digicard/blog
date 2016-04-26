@@ -12,6 +12,7 @@ Rails.application.routes.draw do
                                         omniauth_callbacks: "usuarios/omniauth_callbacks"}
   resources :articulos
   get :set_new_locale, to:'application#set_new_locale'
+  get :enviar_sumario, to:'application#enviar_sumario'
   root to: 'welcome#index'
 
 end

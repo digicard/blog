@@ -5,8 +5,10 @@ es:
   cerrar_sesion: "Cerrar sesion"
   articulos: "Articulos"
   nuevo: "Nuevo"
-  grabar: "Grabar
-  "
+  grabar: "Grabar"
+  editar: "Editar"
+  borrar: "Borrar"
+  
   # Login
   login_boton: "Entrar"
   login_titulo: "Ingresar"
@@ -22,6 +24,7 @@ es:
 
   articulo_field_titulo: "Titulo"
   articulo_field_texto: "Texto"
+  articulo_field_usuario: "Usuario"
 
   # Listado Articulos
   lista_articulo_titulo: "Listado de articulos"
@@ -179,3 +182,7 @@ es:
         default_col_sep: ","
         col_sep: "Separador de columnas"
         col_sep_help: "Deje en blanco para el de defecto ('%{value}')" # value is default_col_sep
+
+  welcome:
+    index:
+      ultimos_diez: "Enviar ultimos diez mails"

@@ -1,0 +1,14 @@
+html
+  body
+    h1 Ultimos 10 articulos creados
+
+
+	- @articulos.each do |articulo|
+
+	  div style='margin-bottom:25px;background-color: rgba(0, 0, 0, 0.05);'
+	    small
+	      = articulo.created_at
+	    h3 style='margin-top:0'
+	      = articulo.titulo
+	    p 
+	      = articulo.texto

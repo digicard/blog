@@ -6,6 +6,8 @@ en:
   articulos: "Articles"
   nuevo: "New"
   grabar: "Save"
+  editar: "Edit"
+  borrar: "Delete"
 
   # Login
   login_boton: "Log in"
@@ -22,6 +24,7 @@ en:
 
   articulo_field_titulo: "Title"
   articulo_field_texto: "Text"
+  articulo_field_usuario: "User"
 
   # Listado Articulos
   lista_articulo_titulo: "List of articles"
@@ -181,3 +184,6 @@ en:
         default_col_sep: ","
         col_sep: "Column separator"
         col_sep_help: "Leave blank for default ('%{value}')" # value is default_col_sep
+  welcome:
+    index:
+      ultimos_diez: "Send last ten mails"
