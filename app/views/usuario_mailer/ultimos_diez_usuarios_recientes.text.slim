@@ -1,0 +1,7 @@
+h1 Ultimos 10 articulos creados
+
+- @articulos.each do |articulo|
+  = articulo.created_at 
+  = articulo.email 
+  = articulo.titulo
+  = articulo.texto

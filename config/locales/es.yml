@@ -185,4 +185,5 @@ es:
 
   welcome:
     index:
-      ultimos_diez: "Enviar ultimos diez mails"
+      diez_mails: "Mail Ult. 10 Art"
+      diez_mails_cinco_usuarios: "Mail Ult. 10 Art. de 5 nuevos usuarios"

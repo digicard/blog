@@ -5,6 +5,10 @@
 	= button_to t(:articulos), articulos_path, class: "button btn btn-default", method: :get
   .col-md-1
 	= button_to t(:nuevo), new_articulo_path, class: "button btn btn-default", method: :get
+  .col-md-2
+	= button_to t(".diez_mails"), enviar_sumario_path, class: "button btn btn-default", method: :get
   .col-md-1
-	= button_to t(".ultimos_diez"), enviar_sumario_path, class: "button btn btn-default", method: :get
+	= button_to t(".diez_mails_cinco_usuarios"), "#", class: "button btn btn-default ajax", method: :get
 
+.alert.alert-success style= "position: absolute;top: 8em;left: 40em;display: none;"
+  | Procesando mensaje
