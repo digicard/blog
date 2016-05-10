@@ -9,8 +9,7 @@ class UsuarioMailer < ApplicationMailer
 	end
 
 	def ultimos_diez_usuarios_recientes(usuario_mail)
-		@articulos = Articulo.select('articulos.*, usuarios.email').joins(:usuario).order("usuarios.id DESC").limit(10)
-		puts @articulos.inspect
+		@articulos = Articulo.includes(:usuario).order(usuario_id: :DESC).limit(10)
 		mail(to: usuario_mail , subject: 'Ultimos 10 registros')
 	end
 end

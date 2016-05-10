@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def enviar_sumario_nuevos_usuarios
-    HardWorker.perform_async(current_usuario.email)
+    MailWorker.perform_async(current_usuario.email)
     redirect_to :back
   end
 
