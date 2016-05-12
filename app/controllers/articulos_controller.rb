@@ -12,6 +12,7 @@ class ArticulosController < ApplicationController
 
   def create
     @articulo = Articulo.new(articulo_params)
+    @articulo.usuario_id = current_usuario.id
     @articulo.save
     redirect_to @articulo
   end
@@ -37,5 +38,5 @@ class ArticulosController < ApplicationController
 
   def articulo_params
     params.require(:articulo).permit(:titulo, :texto)
-   end
+  end
 end

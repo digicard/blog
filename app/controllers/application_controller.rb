@@ -20,6 +20,11 @@ class ApplicationController < ActionController::Base
     redirect_to :back
   end
 
+  def enviar_sumario_nuevos_usuarios
+    MailWorker.perform_async(current_usuario.email)
+    redirect_to :back
+  end
+
   rescue_from Pundit::NotAuthorizedError, with: :permission_denied
 
   private

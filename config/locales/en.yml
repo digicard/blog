@@ -186,4 +186,5 @@ en:
         col_sep_help: "Leave blank for default ('%{value}')" # value is default_col_sep
   welcome:
     index:
-      ultimos_diez: "Send last ten mails"
+      diez_mails: "Mail last 10 Art."
+      diez_mails_cinco_usuarios: "Mail last 10 Art. of 5 new users"
