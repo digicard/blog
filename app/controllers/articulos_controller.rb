@@ -1,6 +1,6 @@
 class ArticulosController < ApplicationController
   def index
-    @articulos = Articulo.all
+    # @articulos = Articulo.all
   end
 
   def new

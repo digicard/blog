@@ -17,4 +17,16 @@ Rails.application.routes.draw do
   get :enviar_sumario_nuevos_usuarios, to: 'application#enviar_sumario_nuevos_usuarios'
   root to: 'welcome#index'
 
+  scope '/api' do
+    scope '/v1' do
+      scope '/articulos' do
+        get '/' => 'api_articulos#index'
+        # Para la siguiente card
+        # scope '/:name' do
+        #   put '/' => 'api_projects#update'
+        # end
+      end
+    end
+  end
+
 end

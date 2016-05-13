@@ -250,6 +250,7 @@ DEPENDENCIES
   html2slim
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   omniauth-facebook
   omniauth-google-oauth2
   pg (~> 0.15)

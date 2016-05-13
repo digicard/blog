@@ -14,15 +14,3 @@
 					th =t :articulo_field_texto
 					th =t :articulo_field_usuario
 			tbody
-				- @articulos.each do |articulo|
-					tr
-						td
-							= articulo.titulo
-						td
-							= articulo.texto
-						td
-							= articulo.usuario_id
-						td
-							= button_to t(:editar), edit_articulo_path(articulo.id), class: "button btn btn-default", method: :get
-						td
-							= button_to t(:borrar), articulo_path(articulo.id), class: "button btn btn-default", method: :delete

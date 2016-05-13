@@ -32,4 +32,5 @@ class ApplicationController < ActionController::Base
   def permission_denied
     redirect_to(request.referrer || root_path)
   end
+
 end
