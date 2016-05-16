@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   scope '/api' do
     scope '/v1' do
       scope '/articulos' do
-        get '/' => 'api_articulos#index'
+        get '/' , to: 'api_articulos#index', as: 'api_articulos'
         # Para la siguiente card
         # scope '/:name' do
         #   put '/' => 'api_projects#update'
@@ -28,5 +28,7 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  
 
 end

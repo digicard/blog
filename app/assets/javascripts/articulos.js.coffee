@@ -6,16 +6,15 @@
 
 $ ->
   $(document).ready ->
-    $.ajax "/api/v1/articulos/",
+    $.ajax $('#ruta_api').val(),
       type : "GET",
       success: (data) ->
         data.forEach (element,index) ->
-      	  art = '<tr>'+
+      	  art = '<tr id="'+element['id']+'" >'+
       		  '<td>'+element['titulo']+'</td>'+
       		  '<td>'+element['texto']+'</td>'+
       		  '<td>'+element['usuario_id']+'</td>'+
-      		  '<td><button id="editar" class="btn btn-default">Editar</button></td>'+
+      		  '<td><button id="'+element['id']+'" class="button btn btn-default">Editar</button></td>'+
       		  '<td><button class="btn btn-default">Borrar</button></td>'+
       		  '</tr>'
       	  $('tbody').append(art)
-
