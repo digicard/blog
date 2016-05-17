@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  api_version(:module => "V1", :path => {:value => "v1"}, :default => true) do
+    resources :articulo
+  end
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   devise_scope :usuario do
@@ -17,18 +21,5 @@ Rails.application.routes.draw do
   get :enviar_sumario_nuevos_usuarios, to: 'application#enviar_sumario_nuevos_usuarios'
   root to: 'welcome#index'
 
-  scope '/api' do
-    scope '/v1' do
-      scope '/articulos' do
-        get '/' , to: 'api_articulos#index', as: 'api_articulos'
-        # Para la siguiente card
-        # scope '/:name' do
-        #   put '/' => 'api_projects#update'
-        # end
-      end
-    end
-  end
-
-  
 
 end

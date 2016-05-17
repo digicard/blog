@@ -46,6 +46,8 @@ gem 'sidekiq'
 
 gem 'kaminari'
 
+gem 'versionist'
+
 group :development, :test do
   gem 'pry-byebug'
 end

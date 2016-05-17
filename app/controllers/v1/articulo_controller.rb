@@ -1,4 +1,4 @@
-class ApiArticulosController < BaseApiController
+class V1::ArticuloController < V1::BaseController
   before_filter :find_articulo, only: [:update]
 
 
@@ -23,4 +23,4 @@ class ApiArticulosController < BaseApiController
      @articulo = Articulo.find(params[:id])
      render nothing: true, status: :not_found unless @articulo.present? && @articulo.usuario_id == current_usuario.id
    end
- end
+end

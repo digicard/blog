@@ -1,6 +1,7 @@
 
+= hidden_field_tag(:ruta_api, v1_articulo_index_path)
+= hidden_field_tag(:ruta_api_edit, v1_articulo_path(:id))
 
-= hidden_field_tag(:ruta_api, api_articulos_path)
 .row
 	.col-md-12
 		h1.page-header =t :lista_articulo_titulo
@@ -16,4 +17,22 @@
 					th =t :articulo_field_titulo
 					th =t :articulo_field_texto
 					th =t :articulo_field_usuario
-			tbody
+					th
+					th
+			tbody.contenido
+
+
+div.form_edit
+	= form_tag( '', :method => :put ,  class: 'form_tag_edit' ) do
+
+		table.table cellspacing=15 cellpadding=15
+			tr
+				td
+					= text_field_tag(:tit_art )
+				td
+					= text_field_tag(:txt_art )
+				td
+					= label_tag(:usuario, "Usuario", class: 'usu_art' )
+		
+		.btn.btn-default.btn-cancel-art type='button' =t :cancelar
+		.btn.btn-success.btn-edit-art type='button' =t :grabar
