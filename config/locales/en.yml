@@ -8,6 +8,7 @@ en:
   grabar: "Save"
   editar: "Edit"
   borrar: "Delete"
+  cancelar: "Cancel"
 
   # Login
   login_boton: "Log in"

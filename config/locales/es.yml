@@ -8,6 +8,7 @@ es:
   grabar: "Grabar"
   editar: "Editar"
   borrar: "Borrar"
+  cancelar: "Cancelar"
   
   # Login
   login_boton: "Entrar"
