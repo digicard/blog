@@ -44,6 +44,8 @@ gem 'rails_admin'
 gem 'pundit'
 gem 'sidekiq'
 
+gem 'kaminari'
+
 group :development, :test do
   gem 'pry-byebug'
 end
